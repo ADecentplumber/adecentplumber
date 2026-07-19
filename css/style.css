@@ -1,176 +1,325 @@
-/* ===== A Decent Plumber ===== */
+/* ===================================
+   A Decent Plumber
+   Professional Plumbing with a Personal Touch
+=================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fa;
-    color: #333;
-    line-height: 1.6;
+html{
+scroll-behavior:smooth;
 }
 
-/* Header */
-
-header {
-    background: #0d5ea8;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f7fb;
+color:#333;
+line-height:1.6;
 }
 
-header img {
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 15px;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-header h1 {
-    font-size: 3rem;
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+background:#0d5ea8;
+padding:15px 0;
+box-shadow:0 3px 12px rgba(0,0,0,.15);
+z-index:999;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
+header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.logo img{
+height:90px;
+width:auto;
 }
 
-/* Sections */
-
-section {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
 }
 
-section h2 {
-    color: #0d5ea8;
-    margin-bottom: 20px;
-    text-align: center;
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
 }
 
-/* Jim's Photo */
-
-section img[alt="Jim"] {
-    display: block;
-    width: 300px;
-    max-width: 100%;
-    margin: 25px auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+nav a:hover{
+color:#ffd166;
 }
 
-/* Family Photo */
+/* HERO */
 
-section img[alt="Family"] {
-    display: block;
-    width: 650px;
-    max-width: 100%;
-    margin: 25px auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+.hero{
+background:linear-gradient(135deg,#0d5ea8,#167bd8);
+color:white;
+padding:90px 0;
 }
 
-/* Project Gallery */
-
-section img[src*="project"] {
-    width: 240px;
-    height: 240px;
-    object-fit: cover;
-    margin: 10px;
-    border-radius: 12px;
-    box-shadow: 0 5px 12px rgba(0,0,0,.2);
-    transition: .3s;
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
 }
 
-section img[src*="project"]:hover {
-    transform: scale(1.05);
+.hero h1{
+font-size:3rem;
+margin-bottom:25px;
 }
 
-/* Form */
+.hero p{
+font-size:1.15rem;
+margin-bottom:30px;
+}
 
-form {
-    max-width: 700px;
-    margin: auto;
+.hero-image{
+text-align:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:430px;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+/* BUTTONS */
+
+.button{
+display:inline-block;
+background:#ffd166;
+color:#0d5ea8;
+padding:15px 28px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+margin-right:15px;
+margin-bottom:15px;
+transition:.3s;
+}
+
+.button:hover{
+transform:translateY(-3px);
+}
+
+.button.secondary{
+background:white;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 0;
+}
+
+section:nth-child(even){
+background:white;
+}
+
+h2{
+font-size:2.4rem;
+color:#0d5ea8;
+margin-bottom:35px;
+text-align:center;
+}
+
+.section-intro{
+text-align:center;
+max-width:700px;
+margin:0 auto 40px;
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-grid img{
+width:100%;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+}
+
+.service-card h3{
+color:#0d5ea8;
+margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:14px;
+box-shadow:0 8px 18px rgba(0,0,0,.2);
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* REVIEWS */
+
+.review-box{
+background:white;
+padding:45px;
+max-width:800px;
+margin:auto;
+text-align:center;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+font-size:1.2rem;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.contact-grid a{
+color:#0d5ea8;
+text-decoration:none;
+font-weight:bold;
 }
 
 input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
 }
 
-button {
-    background: #0d5ea8;
-    color: white;
-    border: none;
-    padding: 14px 25px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
+button{
+background:#0d5ea8;
+color:white;
+padding:16px 30px;
+border:none;
+border-radius:8px;
+font-size:17px;
+cursor:pointer;
+transition:.3s;
 }
 
-button:hover {
-    background: #08457c;
+button:hover{
+background:#09457d;
 }
 
-/* Footer */
+/* FOOTER */
 
-footer {
-    background: #0d5ea8;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
+footer{
+background:#08335d;
+color:white;
+text-align:center;
+padding:50px 20px;
 }
 
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    section img[src*="project"] {
-        width: 100%;
-        height: auto;
-    }
-
-}/* Resize every image on the site */
-img {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
+.footer-logo{
+height:80px;
+margin-bottom:20px;
 }
 
-/* Make the logo a little larger */
-header img {
-    max-width: 180px;
+footer a{
+color:#ffd166;
+text-decoration:none;
 }
 
-/* Make the family photo wider */
-img[src*="family"] {
-    max-width: 700px;
+.copyright{
+margin-top:25px;
+font-size:.9rem;
+opacity:.8;
 }
 
-/* Project photos */
-img[src*="project"] {
-    max-width: 250px;
-    display: inline-block;
-    margin: 10px;
+/* MOBILE */
+
+@media(max-width:900px){
+
+header .container{
+flex-direction:column;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:20px;
+gap:18px;
+}
+
+.hero-content,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:2.3rem;
+}
+
+.hero-image{
+margin-top:35px;
+}
+
+.button{
+display:block;
+margin:15px auto;
+width:260px;
+}
+
 }
