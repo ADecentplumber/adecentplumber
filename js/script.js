@@ -73,19 +73,6 @@ document.querySelectorAll("section").forEach(section=>{
 
 // Contact form
 
-const form = document.querySelector("form");
-
-if(form){
-
-form.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-alert(
-"Thank you for contacting A Decent Plumber!\n\nYour request has been received.\n\nFor immediate service please call\n(603) 664-DCNT (3268)."
-);
-
-form.reset();
 
 });
 
